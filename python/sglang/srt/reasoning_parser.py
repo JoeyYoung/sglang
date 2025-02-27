@@ -55,7 +55,6 @@ class BaseReasoningParser:
                 + len(self.think_end_token) :
             ]
             
-            print(reasoning_content, content)
             return reasoning_content, content
 
 
@@ -66,7 +65,7 @@ class DeepSeekR1ReasoningParser(BaseReasoningParser):
     """
 
     def __init__(self):
-        super().__init__("<think> ", "</think> ")
+        super().__init__("<think>", "</think>") # BUG, "</think> " not in "</think>\n"
 
 
 class ReasoningParser:
