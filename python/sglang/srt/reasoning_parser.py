@@ -54,7 +54,8 @@ class BaseReasoningParser:
                 + len(reasoning_content)
                 + len(self.think_end_token) :
             ]
-
+            
+            print(reasoning_content, content)
             return reasoning_content, content
 
 
